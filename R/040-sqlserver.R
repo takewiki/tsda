@@ -680,3 +680,30 @@ conn_rds_nsic <- function() {
 
 }
 
+
+
+#'获取字段列名
+#'
+#' @param conn 连接
+#' @param table_name  表名
+#'
+#' @return 返回值
+#' @export
+#'
+#' @examples
+#' db_getColName()
+db_getColName <- function(conn=tsda::conn_rds('jlrds'),table_name='t_mrpt_division') {
+  sql <- paste0("select a.name as FName   from sys.columns a
+inner join sys.objects b
+on a.object_id = b.object_id
+ where  b.name ='",table_name,"'")
+  r <- sql_select(conn,sql)
+  ncount <- nrow(r)
+  if(ncount >0){
+    res <- r$FName
+  }else{
+    res <- NULL
+  }
+  return(res)
+
+}

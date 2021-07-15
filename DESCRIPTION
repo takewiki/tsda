@@ -1,7 +1,7 @@
 Package: tsda
 Type: Package
 Title: data access and driver interface in takewiki solutions
-Version: 3.3.0
+Version: 3.3.1
 Author: hulilei
 Maintainer: hulilei <hulilei@takewiki.com.cn>
 Description: data access operations and data driver for ODBC
@@ -10,7 +10,7 @@ Description: data access operations and data driver for ODBC
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.1
 Collate: 
     '010-directory.R'
     '020-text.R'
